@@ -205,9 +205,9 @@ class MerchantOrder implements \JsonSerializable
     }
 
     /**
-     * @return array
+     * @return mixed
      */
-    public function jsonSerialize()
+    public function jsonSerialize(): mixed
     {
         $json = [];
         foreach ($this as $key => $value) {

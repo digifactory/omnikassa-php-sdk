@@ -19,9 +19,9 @@ class MerchantOrderRequest implements \JsonSerializable
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function jsonSerialize()
+    public function jsonSerialize(): mixed
     {
         $json['timestamp'] = $this->getFormattedTimestamp();
         foreach ($this->merchantOrder->jsonSerialize() as $key => $value) {
